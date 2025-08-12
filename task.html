@@ -1,65 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title> Combinators </title>
-  <style>
-    .outer > p{
-        color: red;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+    nav {
+      background-color: palevioletred;
+      overflow: hidden;
     }
-    .outer .weird{
-        color: white;
-        background-color:grey ;
+
+    nav a, nav .dropbtn {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+      background-color: inherit ;
+      border: none;
+      outline: none;
+      cursor:pointer;
     }
-    .outer+article{
-        color: white;
-        background-color: blue;
+    .dropdown {
+      float: left;
+      overflow: hidden;
     }
-    .outer~p{
-        color: white;
-        background-color: blue;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: lightcoral;
+      min-width: 160px;
+      z-index: 1;
     }
-    .middle > span{
-        color: green;
-        background-color: greenyellow;
+
+
+    .dropdown-content a {
+      float: none;
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
     }
-    .weird + p{
-        color:white;
-        background-color: orange;
+
+    nav a:hover, .dropdown:hover .dropbtn {
+      background-color: darkcyan;
+      
     }
-    span+div{
-        color : white;
-        background-color: green;
+
+    .dropdown-content a:hover {
+      background-color: darkcyan;;
     }
-    .middle > span {
-        color: purple;
-        background-color: lightpink;
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
-  </style>
+
+    </style>
 </head>
 <body>
+    <nav>
 
-  <section class="outer">
-    <div class="middle">
-      <article class="weird">
-        <p>Paragraph 1</p>
-        <span>Span in article</span>
-      </article>
-      <p>Paragraph 2</p>
-      <span>Span in middle</span>
-      <div>
-        <p>Nested Paragraph 3</p>
+    <div class="dropdown">
+      <button class="dropbtn">Summary </button>
+      <div class="dropdown-content">
+        <a href="#Summary">About me</a>
       </div>
     </div>
-    <p>Paragraph 4</p>
-    <span>Span in outer</span>
-  </section>
 
-  <article>
-    <p>Paragraph 5</p>
-  </article>
+    <div class="dropdown">
+      <button class="dropbtn">Education </button>
+      <div class="dropdown-content">
+        <a href="#Grad">Graduation</a>
+        <a href="#Dip">Diploma</a>
+        <a href="#SSC">SSC</a>
+      </div>
+    </div>
 
-  <p>Paragraph 6</p>
+    <div class="dropdown">
+        <button class="dropbtn">Projects </button>
+        <div class="dropdown-content">
+            <a href="#Major">Major</a>
+            <a href="#Mini">Mini</a>
+            
+        </div>
+    </div>
 
+    <div class="dropdown">
+        <button class="dropbtn">Certifications</button>
+        <div class="dropdown-content">
+          <a href="#cert_1">cert_1</a>
+          <a href="#cert_2">cert_2</a>
+          <a href="#cert_3">cert_2</a>
+          <a href="#Location">Location</a>
+        </div>
+    </div>
+
+        <div class="dropdown">
+        <button class="dropbtn">Self Intro</button>
+        <div class="dropdown-content">
+          <a href="#">Video</a>
+        </div>
+    </div>
+    </nav>
+    <h1 align="center"style="background-color: lightslategray;" >NISHANTH ALLADI</h1>
+    <h4 align="center" >+91 9059640582    alladinishanth166@gmail.com    www.linkedin.com</h4>
+
+    <h3 id="Summary"> SUMMARY </h3>
+    <p>
+        Aspiring Software Engineer and final-year B.Tech Computer Science student specializing in Data Science. Strong foundation in machine learning, data analysis, and core computer science principles. Passionate about building scalable solutions, enhancing user experiences, and exploring new technologies. Proven problem-solving and team collaboration skills demonstrated through diverse academic projects. Eager to contribute to innovative development teams and grow professionally through tech.
+    </p><hr/>
+
+    <h3 id="Education"> EDUCATION </h3>
+    <p id="Grad"><b>MALLA REDDY COLLEGE OF ENGINEERING & TECHNOLOGY, HYDERABAD</b></p>
+    <p class="type_of_study">B.Tech in COMPUTER SCIENCE ENGINEERING (DATA SCIENCE)   JNTUH   CGPA: 7.54</p>
+    <p id="#Dip"><b>SINGARENI COLLIERIES POLYTECHNIC, MANCHIRIYAL</b></p>
+    <p class="type_of_study">Diploma in Mechanical Engineering (SBTET)   CGPA: 9.2</p>
+    <p id="SSC"><b>TRINITY HIGH SECONDARY SCHOOL, PEDDAPALLI</b></p>
+    <p class="type_of_study">Class-10 (SSC)   CGPA: 9.3</p><hr/>
+
+    <h3 id="Projects"> PROJECTS</h3>
+    <p id="Major"><b>Data Poison Detection for Distributed Machine Learning</b></p>
+    <ul>
+        <li>Developed a structured and lightweight framework to detect data poisoning attacks in distributed machine learning systems. Secured multi-node environment where nodes send local updates and central node detects poisoned updates.</li>
+        <li>Integrated Support Vector Machine (SVM) classifier to filter malicious data contributions and Isolation Forest for anomaly detection from clean data.</li>
+        <li>Built a Tkinter-based GUI enabling intuitive interaction with system status, update history, and detection results.</li>
+    </ul>
+
+    <p id="Mini"><b>Brain Tumor Detection using Machine Learning</b></p>
+    <ul>
+        <li>Trained the system with supervised deep learning, leveraging CNN techniques to detect tumors in brain MRI images.</li>
+        <li>Implemented user-friendly interface, allowing for seamless real-time tumor detection experience.</li>
+        <li>Enabled AI system to identify patterns and similarities among scan reports, leading to an improvement in user engagement.</li>
+    </ul><hr/>
+
+    <h3 id="Certifications"> CERTIFICATIONS</h3>
+    <ul>
+        <li id="cert_1">Python for Data Science, AI and Development - IBM, coursera.org</li>
+        <li id="cert_2">Machine Learning: an overview issued by Politecnico di Milano, coursera.org</li>
+        <li id="cert_3">SQL and SQL for Data Science with Python - issued by IBM, coursera.org</li>
+    </ul> 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16371.819899891489!2d78.39559795!3d17.4809431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1754975000307!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="Location"></iframe>"
+
+
+    
+
+    
 </body>
 </html>
